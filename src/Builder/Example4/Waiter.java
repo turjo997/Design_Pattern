@@ -1,18 +1,22 @@
-package Builder.Example2;
+package Builder.Example4;
+
 
 public class Waiter {
+
     private PizzaBuilder pizzaBuilder;
 
     public void setPizzaBuilder(PizzaBuilder pizzaBuilder) {
         this.pizzaBuilder = pizzaBuilder;
     }
 
-    public Pizza constructPizza() {
-        pizzaBuilder.buildDough();
-        pizzaBuilder.buildSauce();
-        pizzaBuilder.buildTopping();
+    public Pizza getPizza(){
         return pizzaBuilder.getPizza();
     }
 
-
+    public void constructPizza() {
+        pizzaBuilder.createNewPizzaProduct();
+        pizzaBuilder.buildDough();
+        pizzaBuilder.buildSauce();
+        pizzaBuilder.buildTopping();
+    }
 }
