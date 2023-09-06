@@ -37,4 +37,14 @@ public class Meal {
     public void setBriyani(String briyani) {
         this.briyani = briyani;
     }
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "curry='" + curry + '\'' +
+                ", bread='" + bread + '\'' +
+                ", coldDrink='" + coldDrink + '\'' +
+                ", briyani='" + briyani + '\'' +
+                '}';
+    }
 }

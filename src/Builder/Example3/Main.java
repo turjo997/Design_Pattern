@@ -14,8 +14,18 @@ public class Main {
         System.out.println(burger);
 
         //GOF Builder example
+        
 
-        VegMealBuilder vegMealBuilder = new VegMealBuilder();
-        Meal meal = new MealDirector(vegMealBuilder).prepareMeal();
+        MealDirector mealDirector = new MealDirector();
+
+        MealBuilder vegMealBuilder = new VegMealBuilder();
+
+
+        mealDirector.setMealBuilder(vegMealBuilder);
+        mealDirector.prepareMeal();
+
+        Meal meal = mealDirector.getMeal();
+
+        System.out.println(meal);
     }
 }
